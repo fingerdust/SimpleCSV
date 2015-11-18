@@ -1,0 +1,11 @@
+<ion-view view-title="Line Item">
+ 	<ion-content>
+		<table>
+			<tr ng-repeat="(key, value) in lineItem">
+	  			<td> {{key}}: </td> <td> {{ value }} </td>
+			</tr>
+		</table>
+		<button ng-click="increment()">+1</button>
+		<button ng-click="edit()">EDIT</button>
+  	</ion-content>
+</ion-view>

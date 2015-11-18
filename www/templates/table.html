@@ -1,0 +1,17 @@
+<ion-view view-title="Table">
+	<ion-content>
+		<ion-scroll zooming="true" direction="xy" style="width: 500px; height: 500px">
+			<table class="table">
+				<tr>
+					<th>#</th>
+					<th ng-repeat="col in keyObj"><a href="#">{{col}}</a></th>
+				</tr>
+				<tr ng-click="selectItem($index)" ng-repeat="row in data | limitTo: limit">
+					<td>{{$index + 1}}</td>
+					<td ng-repeat="item in row">{{item}}</td>
+				</tr>
+			</table>
+		</ion-scroll>
+		<ion-infinite-scroll on-infinite="addItems()"></ion-infinite-scroll>
+	</ion-content>
+</ion-view>
